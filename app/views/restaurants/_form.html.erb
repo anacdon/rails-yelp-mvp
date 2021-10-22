@@ -1,0 +1,16 @@
+<div>
+<%= simple_form_for(@restaurant) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.input :phone_number %>
+  <%= f.input :category, class: "form-data-list", list: "datalistOptions", placeholder:"Type to search..." %>
+    <datalist id="datalistOptions">
+      <option value="Chinese">
+      <option value="Italian">
+      <option value="Japanese">
+      <option value="French">
+      <option value="Belgian">
+    </datalist>
+  <%= f.submit "Include restaurant", class: "btn btn-warning rounded-4y"%>
+<% end %>
+</div>
